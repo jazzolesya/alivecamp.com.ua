@@ -60,7 +60,7 @@
                     });
                 });
             });
-    });
+        });
 
     </script>
 
@@ -97,15 +97,19 @@
                         <li class="nav-item">
                             <a class="nav-link p-n-link mx-3" href="#contacts">Контакти</a>
                         </li>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link p-n-link p-n-link-i mr-1 ml-5 mt-1 " href="https://www.facebook.com/alivecamps" target="_blank">
-                                <i class="fa fab-facebook-f"></i>
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link p-n-link mt-1" href="https://www.instagram.com/alivecamps" target="_blank">
-                                <i class="fa fab-instagram"></i>
+                                <i class="fab fa-instagram"></i>
                             </a>
+                        </li>
+<!--                         <li class="nav-item ml-5">
+                            <div class="">068 768 19 00</div>
+                            <div class="">073 000 73 76</div>
                         </li> -->
                     </ul>
 
@@ -165,7 +169,9 @@
                                 <div class="modal-content main_p__modal"> 
                                     <button type="button" class="close main_p__modal__close" data-dismiss="modal">&times;</button>
                                 <div class="modal-body">
-                                    <iframe id="cartoonVideo" class="main_p__video" src="//www.youtube.com/embed/GN6Fp_4xpss"   frameborder="0" allowfullscreen></iframe>
+                                    <div class="main_p__video">
+                                        <iframe id="cartoonVideo" src="//www.youtube.com/embed/GN6Fp_4xpss" width="100%"" height="100%" frameborder="0" allowfullscreen></iframe>
+                                    </div>
                                 </div>
                               </div>
                             </div>
@@ -480,31 +486,16 @@
                                 <!-- Modal body -->
                                     <div class="modal-body">
                                         <script type="text/javascript">
-                                            function checkTotal() {
-
-                                            var length = $('.total:checked').length;
-                                            var value = 0;
-                                            var discount = 0;
-                                            switch (length) {
-                                              case 1:
-                                                value = 3090;
-                                                break;
-                                              case 2:
-                                                value = 1960;                                
-                                                break;
-                                              case 3:
-                                                value =  3090;                                  
-                                                break;
-                                               case 4:
-                                                value = 3090;               
-                                               break;
-                                            }
-                                            document.listForm.total.value = value;
-                                            document.listForm.discount.value = discount ;
-                                            }
-
-                                            function checkDiscount() {
-                                            }
+                                            $(document).ready(function () {
+                                                function updateSum() {
+                                                    var total = 0;
+                                                    $(".sum:checked").each(function(i, n) {total += parseInt($(n).val());})
+                                                    $("#total").val(total);
+                                                }
+ 
+                                                $("input.sum").change(updateSum);
+                                                updateSum();
+                                            })
                                         </script>
 
                                         <form name="listForm" id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeTVSqwQeDw9_3zIuYXdSzdCNdY51hmtCzJOn4Vmx_nSsCwHw/formResponse" method="post" enctype="text/plain" target="_blank">
@@ -541,25 +532,28 @@
                                                 Вибір заїзду:
                                             </span></br>
                                             <div class="pick-race__wrapper">
-                                                <input type="checkbox" name="entry.42356218" id='event1' class="total" value="890" onchange="checkTotal();checkDiscount()">
+                                                <label><input type="checkbox" name="entry.42356218" id='event1' class="sum" value="3090" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 1. Море, 24.06-06.07, 10-14 років</span>
                                                 </br>
 
-                                                <input type="checkbox" name="entry.152859378"  id='event2' class="total" value="890" onchange="checkTotal();checkDiscount()">
+                                                <label><input type="checkbox" name="entry.152859378" id='event2' class="sum" value="3090" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 2. Море, 04.08-16.08, 15-29 років
-                                                </span></br>
+                                                </span>
+                                                </br>
 
-                                                <input type="checkbox" name="entry.777428256"  id='event3' class="total" value="890" onchange="checkTotal();checkDiscount()">
+                                                <label><input type="checkbox" name="entry.777428256" id='event3' class="sum" value="1490" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 3. Шацькі озера, 20.08-31.08, 14-29 років
-                                                </span></br>
+                                                </span>
+                                                </br>
 
-                                                <input type="checkbox" name="entry.822357146" id='event4' class="total" value="890" onchange="checkTotal();checkDiscount()">
+                                                <label><input type="checkbox" name="entry.822357146" id='event4' class="sum" value="3090" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 4. Море, 10.06-22.06, БЕЗ ПРОГРАМИ, 0-100 років
-                                                </span></br>
+                                                </span>
+                                                </br>
 
-                                                
-                                                <br/>
-                                                До оплати: <input class="calculate_input" type="text" size="5" name="total" value="0" readonly/>
+
+                                                <br/> До оплати:
+                                                <input id="total" class="calculate_input" type="text" size="5" name="total" value="0" readonly/>
                                                 <!-- Економія: <input class="calculate_input" type="text" size="5" name="discount" value="0" readonly/> -->
                                             </div>
                                             </br>
@@ -821,8 +815,8 @@
             </div>
             <div class="row">
                 <div class="col-6 footer__col">
-                    <div class="footer__c">Київстар: 097 220 78 30</div>
-                    <div class="footer__c">Lifecell: 063 066 02 93</div>
+                    <div class="footer__c">Київстар: 068 768 19 00</div>
+                    <div class="footer__c">Lifecell: 073 000 73 76</div>
                 </div>
                 <div class="col-6">
                     <div class="footer__icons">
@@ -846,7 +840,40 @@
             </div>
         </div>
     </footer>
+    <script>
+        function filterPath(string) {
+          return string
+            .replace(/^\//, '')
+            .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
+            .replace(/\/$/, '');
+        }
 
+        var locationPath = filterPath(location.pathname);
+        $('a[href*="#"]').each(function () {
+          var thisPath = filterPath(this.pathname) || locationPath;
+          var hash = this.hash;
+          if ($("#" + hash.replace(/#/, '')).length) {
+            if (locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
+              var $target = $(hash), target = this.hash;
+              if (target) {
+                $(this).click(function (event) {
+                  event.preventDefault();
+                  $('html, body').animate({scrollTop: $target.offset().top}, 700, function () {
+                    location.hash = target; 
+                    $target.focus();
+                    if ($target.is(":focus")){ //checking if the target was focused
+                      return false;
+                    }else{
+                      $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
+                      $target.focus(); //Setting focus
+                    };
+                  });       
+                });
+              }
+            }
+          }
+        });
+    </script>
 <!--     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
