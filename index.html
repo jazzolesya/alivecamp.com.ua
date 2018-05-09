@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alive Camp</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU="
         crossorigin="anonymous" />
@@ -67,13 +67,15 @@
 
     <div>
         <nav class="navbar navbar-expand-md fixed-top p-nav">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler p-nav__toggler-btn" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class='container-fluid'>
+                
                     <ul class="navbar-nav mr-auto mx-auto p-nav__ul">
                         <li class="nav-item">
                             <a class="nav-link p-n-link mx-3 active" href="#main">Головна
@@ -115,8 +117,8 @@
                     </ul>
 
                 </div>
-            </div>
-            <div class='transparent'>
+            
+            <div class='transparent d-none d-sm-block'>
                 <img src="images/Menu-Waves.svg" alt="Logo" class="nav-img" height="">
             </div>
         </nav>
@@ -127,7 +129,7 @@
     <div class='full__m'>
         <div class='main_p'>
             <div class='main_p__t'>
-                <div class='main_p__v main_p__v__1 mr-5'>
+                <div class='main_p__v main_p__v__1 mr-5 d-none d-sm-block'>
                     НА ШАЦЬКИХ ОЗЕРАХ
                 </div>
                 <div class='main_l_p'>
@@ -140,7 +142,7 @@
                         </a>
                     </div>
                 </div>
-                <div class='main_p__v main_p__v__2 ml-5'>
+                <div class='main_p__v main_p__v__2 ml-5 d-none d-sm-block'>
                     В КОБЛЕВО НА МОРІ
                 </div>
             </div>
@@ -189,24 +191,24 @@
     <div class='full__a about'>
         <div class="container-fluid">
             <div class="row about__r">
-                <div class="col-4 about__who">
+                <div class="col-12 col-lg-4 about__who">
                     <h2>ДЛЯ КОГО?</h2>
                     <p class="about__p">Для молоді, яка відчуває себе живою, активною та драйвовою!</p>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-lg-4 d-none d-sm-block">
                     <div class="about__logo">
                         <img src='images/AliveCampNew_LogoBig-2.svg'>
                         <div class='year'>2018</div>
                     </div>
                 </div>
-                <div class="col-4 about__why">
+                <div class="col-12 col-lg-4 about__why">
                     <h2>ДЛЯ ЧОГО?</h2>
                     <p class="about__p">Для розвитку та відпочинку чотирьох невід'ємних складових людини: духу, душі, тіла, і розуму.</p>
                 </div>
             </div>
             <div class="row">
-                <div class='offset-md-2 col-8'>
-                    <div class='about__div'>
+                <div class='offset-md-2 col-12 col-md-8'>
+                    <div class='about__div table-responsive'>
                         <table class='table about__table'>
                             <thead>
                                 <tr>
@@ -264,13 +266,14 @@
     <div class='cd-fixed-bg cd-fixed-bg--1 full__is'>
         <div class="container">
             <div class='row'>
-                <div class="offset-md-4 col-4">
+                <div class="offset-md-4 col-12 col-lg-4">
                     <div class="is__logo">
                         <img src='images/AliveCampNew_LogoBig-2.svg'>
                         <div class='year'> - ЦЕ </div>
                     </div>
                 </div>
             </div>
+            <div class="is__additional">
             <div class='row is__row'>
                 <div class="is__div">
                     <div class='is__circle is__circle-1'>
@@ -336,6 +339,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
 
     <!-- program -->
@@ -364,7 +368,7 @@
   
         <div class="container-fluid cd-scrolling-bg ">
             <div class='row cd-scrolling-bg__content'>
-                <div class='col-6'>
+                <div class='col-12 col-lg-6'>
                     <h3 class='act__h3'>АКТИВНОСТІ ДЛЯ ТІЛА</h3>
                     <div class='act__div'>
                         <div class='act__img'>
@@ -413,7 +417,7 @@
                     </div>
                 </div>
 
-                <div class='col-6'>
+                <div class='col-12 col-lg-6'>
                     <h3 class='act__h3'>АКТИВНОСТІ ДЛЯ РОЗУМУ</h3>
                     <div class='act__div'>
                         <div class='act__img'>
@@ -472,7 +476,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
+                <div class="col-12 col-lg-3">
                     <div class="reg__block">
                         <div class="reg__num reg__num-1">1</div>
                         <div class="reg__step">Заповніть анкету</div>
@@ -578,10 +582,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1 reg__arr">
+                <div class="col-12 col-lg-1 reg__arr">
                     <img src="images/AliveCampNew_right-arrow.svg">
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     <div class="reg__block">
                         <div class="reg__num reg__num-2">2</div>
                         <div class="reg__step">Здійсніть передоплату</div>
@@ -627,10 +631,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1 reg__arr">
+                <div class="col-12 col-lg-1 reg__arr">
                     <img src="images/AliveCampNew_right-arrow.svg">
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-lg-3">
                     <div class="reg__block">
                         <div class="reg__num reg__num-3">3</div>
                         <div class="reg__step reg__step-3">Підтвердіть передоплату</div>
@@ -696,7 +700,7 @@
                         </div>
 
                         <div class="reg__info__wrapper">
-                            <div class="reg__info__num">25 травня</div>
+                            <div class="reg__info__num d-none d-sm-block">25 травня</div>
                             <div class="reg__info__cir">1</div>
                         </div>
                         <div class="reg__info">
@@ -706,7 +710,7 @@
                         </div>
 
                         <div class="reg__info__wrapper">
-                            <div class="reg__info__num">10 червня</div>
+                            <div class="reg__info__num d-none d-sm-block">10 червня</div>
                             <div class="reg__info__cir">2</div>
                         </div>
                         <div class="reg__info">
@@ -716,11 +720,11 @@
                         </div>
 
                         <div class="reg__info__wrapper">
-                            <div class="reg__info__num">26 червня</div>
+                            <div class="reg__info__num d-none d-sm-block">26 червня</div>
                             <div class="reg__info__cir">3</div>
                         </div>
                     </div>
-                    <hr class="reg__hr">
+                    <hr class="reg__hr d-none d-sm-block">
                 </div>
             </div>
         </div>
@@ -818,11 +822,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 footer__col">
+                <div class="col-12 col-lg-6 footer__col">
                     <div class="footer__c">Київстар: 068 768 19 00</div>
                     <div class="footer__c">Lifecell: 073 000 73 76</div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <div class="footer__icons">
                         <div class="footer__icon">
                             <a href="https://www.facebook.com/alivecamps" target="_blank">
@@ -877,6 +881,13 @@
               }
             }
           }
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.p-nav__toggler-btn').click(function(){
+                $(this).toggleClass('open');
+            });
         });
     </script>
 <!--     <script>
