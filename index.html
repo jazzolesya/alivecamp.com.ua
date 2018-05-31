@@ -10,7 +10,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU="
         crossorigin="anonymous" />
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" integrity="sha256-KWs9jp+jZzOZmmnW5jC8Y2HqI9rajJig5I00un99DtI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" integrity="sha256-AWqwvQ3kg5aA5KcXpX25sYKowsX97sTCTbeo33Yfyk0=" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
 
@@ -21,10 +23,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- owl carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js" integrity="sha256-s5TTOyp+xlSmsDfr/aZhg0Gz+JejYr5iTJI8JxG1SkM=" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha256-C8oQVJ33cKtnkARnmeWp6SDChkU+u7KvsNMFUzkkUzk="
         crossorigin="anonymous"></script>
+
+    <script src="scripts/src/_includes/slider.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -63,6 +67,7 @@
             });
         });
 
+
     </script>
 
     <div>
@@ -91,11 +96,11 @@
                         <li class="nav-item">
                             <a class="nav-link p-n-link mx-3" href="#activities">Активності</a>
                         </li>
-<!--                         <li class="nav-item">
-                            <a class="nav-link p-n-link mx-3" href="#photo">Фото/Відео</a>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link p-n-link mx-3" href="#registration">Ціни та реєстрація</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-n-link mx-3" href="#photo">Фото</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link p-n-link mx-3" href="#contacts">Контакти</a>
@@ -540,21 +545,21 @@
                                                 Вибір заїзду:
                                             </span></br>
                                             <div class="pick-race__wrapper">
-                                                <label><input type="checkbox" name="entry.42356218" id='event1' class="sum" value="3090" data-toggle="checkbox"></label>
+                                                <label><input type="checkbox" name="entry.42356218" id='event1' class="sum" value="3290" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 1. Море, 24.06-06.07, 10-14 років</span>
                                                 </br>
 
-                                                <label><input type="checkbox" name="entry.152859378" id='event2' class="sum" value="3090" data-toggle="checkbox"></label>
+                                                <label><input type="checkbox" name="entry.152859378" id='event2' class="sum" value="3290" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 2. Море, 04.08-16.08, 15-29 років
                                                 </span>
                                                 </br>
 
-                                                <label><input type="checkbox" name="entry.777428256" id='event3' class="sum" value="1490" data-toggle="checkbox"></label>
+                                                <label><input type="checkbox" name="entry.777428256" id='event3' class="sum" value="1590" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 3. Шацькі озера, 20.08-31.08, 14-29 років
                                                 </span>
                                                 </br>
 
-                                                <label><input type="checkbox" name="entry.822357146" id='event4' class="sum" value="3090" data-toggle="checkbox"></label>
+                                                <label><input type="checkbox" name="entry.822357146" id='event4' class="sum" value="3290" data-toggle="checkbox"></label>
                                                 <span class="email__modal-text"> 4. Море, 10.06-22.06, БЕЗ ПРОГРАМИ, 0-100 років
                                                 </span>
                                                 </br>
@@ -740,69 +745,468 @@
                     <div class="photo__heading">ФОТО З МИНУЛИХ ЗАЇЗДІВ</div>
                 </div>
             </div>
-
             <div class='row'>
-                <div class='col-3'>
+                <div class='col-12 col-lg-3'>
+                    <div class="feedback owl-carousel owl-theme">
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Мені дуже сподобались люди, вони дуже добрі та приємні.
+                                Також сподобалось те, що організатори багато чого продумали - вечірні програми, командні ігри, кухня.
+                                Мені сподобалось все і я страшенно задоволена.
+                                Я закохалась у цей табір і буду їздити сюди щороку.
+                            </p>
+                            <p class="feedback__content">Настя</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Завдяки цьому табору я став більш відкритою людиною і майже перестав боятись публіки.
+                            </p>
+                            <p class="feedback__content">Владислав</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Прекрасні дні, ніколи не забуду дні, проведені тут. Тільки радість і любов.
+                                Цей табір приніс мені тепло, нових друзів, хороші враження.
+                                Буду всім розказувати.
+                            </p>
+                            <p class="feedback__content">Анастасія</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Цей табір подарував мені багато нових друзів, а також там я зустріла класних людей.
+                                Дуже сподобались смаколики, якими нас годували.
+                            </p>
+                            <p class="feedback__content">Софія</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Набагато краще, ніж сидіти вдома. Життєрадісні аніматори, хороша програма, чудове місцепроведення.
+                            </p>
+                            <p class="feedback__content">Віталій</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Сподобались нові знайомства, духовне збагачення.
+                                За час перебування в таборі зрозумів багато цікавих речей для себе.
+                            </p>
+                            <p class="feedback__content">Данило</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Сподобалась атмосфера. Навчився радіти дрібницям і тому, що вже маю.
+                            </p>
+                            <p class="feedback__content">Андріан</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <div class="photo__container">
                         <div class="row">
                             <div class='col-12 photo__container__col'>
                                 <div class="photo__full">
-                                    <img src="images/031.jpg" , class="cover-img">
+                                    <img src="images/slider/1.jpg" alt="1.jpg" class="cover-img">
                                 </div>
                                 <div class="photo__full">
-                                    <img src="images/032.jpg" , class="cover-img">
+                                    <img src="images/slider/2.jpg" alt="2.jpg" class="cover-img">
                                 </div>
                                 <div class="photo__full">
-                                    <img src="images/033.jpg" , class="cover-img">
+                                    <img src="images/slider/3.jpg" alt="2.jpg" class="cover-img">
                                 </div>
                                 <div class="photo__full">
-                                    <img src="images/034.jpg" , class="cover-img">
+                                    <img src="images/slider/4.jpg" alt="2.jpg" class="cover-img">
                                 </div>
                                 <div class="photo__full">
-                                    <img src="images/035.jpg" , class="cover-img">
+                                    <img src="images/slider/5.jpg" alt="2.jpg" class="cover-img">
                                 </div>
                                 <div class="photo__full">
-                                    <img src="images/036.jpg" , class="cover-img">
+                                    <img src="images/slider/6.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/7.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/8.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/9.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/10.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/11.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/12.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/13.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/14.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/15.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/16.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/17.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/18.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/19.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/20.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/21.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/22.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/23.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/24.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/25.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/26.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/27.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/28.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/29.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/30.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/31.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/32.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/33.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/34.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/35.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/36.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/37.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/38.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/39.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/40.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/41.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/42.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/43.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/44.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/45.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/46.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/47.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/48.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/49.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/50.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/51.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/52.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/53.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/54.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/55.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/56.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/57.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/58.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/59.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/60.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/61.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/62.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/63.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/64.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/65.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/66.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/67.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/68.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/69.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/70.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/71.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/72.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/73.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/74.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/75.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/76.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/77.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/78.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/79.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/80.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/81.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/82.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/83.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/84.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/85.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/86.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/87.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/88.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/89.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/90.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/91.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/92.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/93.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/94.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/95.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/96.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/97.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/98.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/99.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/100.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                 <div class="photo__full">
+                                    <img src="images/slider/101.jpg" alt="1.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/102.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/103.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/104.jpg" alt="2.jpg" class="cover-img">
+                                </div>
+                                <div class="photo__full">
+                                    <img src="images/slider/105.jpg" alt="2.jpg" class="cover-img">
                                 </div>
                             </div>
                         </div>
-
-                        <a class="prev" onclick="plusSlides(-1)">
-                            <img src="images/ic_keyboard_arrow_left_white_48px.svg">
+                        <a class="prev gal" onclick="plusSlides(-1)">
+                            <img src="images/back.svg">
                         </a>
-                        <a class="next" onclick="plusSlides(1)">
-                            <img src="images/ic_keyboard_arrow_right_white_48px.svg">
+                        <a class="next gal" onclick="plusSlides(1)">
+                            <img src="images/back.svg" class="photo__back_svg">
                         </a>
-
                         <div class="row">
-                            <div class="column">
-                                <img class="demo cursor" src="images/031-s190x90.jpg" onclick="currentSlide(1)" alt="The Woods">
+                                <div class="column">
+                                    <img class="demo cursor" src="images/slider/1.jpg" onclick="currentSlide(1)" alt="The Woods">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="images/slider/2.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="images/slider/3.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="images/slider/4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="images/slider/5.jpg" onclick="currentSlide(5)" alt="Nature and sunrise">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="images/slider/6.jpg" onclick="currentSlide(6)" alt="Snowy Mountains">
+                                </div>
                             </div>
-                            <div class="column">
-                                <img class="demo cursor" src="images/032-s190x90.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="images/033-s190x90.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="images/034-s190x90.jpg" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="images/035-s190x90.jpg" onclick="currentSlide(5)" alt="Nature and sunrise">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="images/036-s190x90.jpg" onclick="currentSlide(6)" alt="Snowy Mountains">
-                            </div>
+                      
+                    </div>
+                </div>
+                    <div class='col-12 col-lg-3'>
+                    <div class="feedback owl-carousel owl-theme">
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Зустріла багато нових друзів. Було море атмосферних вечорів. Дякую за мега круту дискотеку.
+                                Такі табори дають нове, таке довгоочікуване натхнення і мотивацію на нові звершення.
+                                P.S. Дякую за волейбол.
+                            </p>
+                           <br>
+                           <br>
+                            <p class="feedback__content">Мар'яна</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Сподобались учасники та аніматори, а також розважальні вечірні програми.
+                            </p>
+                            <p class="feedback__content">Олекса</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Чудове озеро, смачні супи, водний квест, чудова музика зранку.
+                                Я зрозуміла, що треба більш радіти життю, ризикувати, бути проактивним, менше перейматись проблемами, віддавати і довіряти їх Богу.
+                            </p>
+                            <p class="feedback__content">Ірина</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Люди, які організовували це все, ви круті! Сподобалось все, без виключення.
+                                Враження дуже круті.
+                            </p>
+                            <p class="feedback__content">Владислав</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                У цьому таборі я більше відкрилась людям. Раніше я не могла до них підійти і щось сказати, зараз все зовсім по-іншому.
+                                Мені все сподобалось. Колись я б ніколи не погодилась поїхати в якийсь табір, але Alive - це любов.
+                            </p>
+                            <p class="feedback__content">Анастасія</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Найбільше сподобалась атмосфера, дух табору. А також активності для розуму та саморозвитку.
+                            </p>
+                            <p class="feedback__content">Павло</p>
+                        </div>
+                        <div class="feedback__block">
+                            <p class="feedback__content">
+                                Я вперше на подібному таборі, мені все сподобалось і програма для мене просто ідеальна.
+                            </p>
+                            <p class="feedback__content">Настя</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div> 
  -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-lg-6 adv__col">
@@ -836,25 +1240,10 @@
                     <a href="https://www.facebook.com/events/570564359993076/" target="_blank"><div>Taizé</div></a>
                 </div>
             </div>
-            </div>
-                
+            </div>             
                 
             </div>
         </div>
-<!--             <div class="adv__block">
-                <div class="adv__img">
-                    <img src="images/teze-1.jpg">
-                </div>
-                <div class="adv__img">
-                    <img src="images/teze-2.jpg">
-                </div>
-                <div class="adv__img">
-                    <img src="images/teze-3.jpg">
-                </div>
-                <div class="adv__img">
-                    <img src="images/teze-4.jpg">
-                </div>
-            </div> -->
 
 
 
@@ -935,15 +1324,35 @@
             }
           }
         });
-    </script>
-    <script>
+
         $(document).ready(function(){
             $('.p-nav__toggler-btn').click(function(){
                 $(this).toggleClass('open');
             });
         });
+
+
+         var owl = $('.owl-carousel'),
+            owlOptions = {
+                loop: true,
+                margin: 10,
+                nav: true,
+                navText: [
+                            "<img src='images/back.svg'>",
+                            "<img src='images/next.svg'>"
+                        ],
+
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                }
+            };
+                
+        var owlActive = owl.owlCarousel(owlOptions);
+               
     </script>
-<!--     <script>
+    <script>
         var slideIndex = 1;
         showSlides(slideIndex);
 
@@ -977,7 +1386,7 @@
             // captionText.innerHTML = dots[slideIndex - 1].alt;
         }
 
-    </script> -->
+    </script>
 
 </body>
 
