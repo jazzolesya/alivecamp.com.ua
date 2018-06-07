@@ -482,7 +482,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-lg-3">
-                    <div class="reg__block">
+                    <div class="reg__block reg-1">
                         <div class="reg__num reg__num-1">1</div>
                         <div class="reg__step">Заповніть анкету</div>
                         <button class="reg__btn" data-toggle="modal" data-target="#fillIn">Заповнити</button>
@@ -587,11 +587,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-1 reg__arr">
+                <div class="col-12 col-lg-1 reg__arr reg-2">
                     <img src="images/AliveCampNew_right-arrow.svg">
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="reg__block">
+                    <div class="reg__block reg-3">
                         <div class="reg__num reg__num-2">2</div>
                         <div class="reg__step">Здійсніть передоплату</div>
                         <button class="reg__btn reg__btn-2" data-toggle="modal" data-target="#ways">Показати способи оплати</button>
@@ -636,11 +636,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-1 reg__arr">
+                <div class="col-12 col-lg-1 reg__arr reg-4">
                     <img src="images/AliveCampNew_right-arrow.svg">
                 </div>
                 <div class="col-12 col-lg-3">
-                    <div class="reg__block">
+                    <div class="reg__block reg-5">
                         <div class="reg__num reg__num-3">3</div>
                         <div class="reg__step reg__step-3">Підтвердіть передоплату</div>
                         <button class="reg__btn" data-toggle="modal" data-target="#sendCheque">Відправити</button>
@@ -1290,6 +1290,90 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+        /* Check the location of each desired element */
+        $('.about__who, .about__why, .about__div').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            };
+            });
+        $(".reg-1").each( function(c){ 
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            };   
+        }); 
+        $(".reg-2").each( function(c){ 
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},700);
+                    
+            };   
+        });
+        $(".reg-3").each( function(c){ 
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1000);
+                    
+            };   
+        });
+        $(".reg-4").each( function(c){ 
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1200);
+                    
+            };   
+        });
+        $(".reg-5").each( function(c){ 
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            };   
+        });
+    
+    });
+    
+});
+    </script>
 
     <script>
         function filterPath(string) {
